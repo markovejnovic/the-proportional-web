@@ -1,4 +1,6 @@
-/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/
+/* By Oskar Wickström
+Licensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)
+*/
 @import "https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 
 /* src/reset.css */
@@ -131,8 +133,14 @@ table {
   --font-family-code: "Courier Prime", monospace;
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
-  --text-color: #000;
-  --background-color: #fff;
+  --color-scheme: light dark;
+  --light-text-color: #000;
+  --light-background-color: #fff;
+  --dark-text-color: #e8e6e3;
+  --dark-background-color: #161514;
+  --text-color: light-dark(var(--light-text-color), var(--dark-text-color));
+  --background-color: light-dark(var(--light-background-color), var(--dark-background-color));
+  color-scheme: var(--color-scheme);
   --horizontal-margin: 3ch;
   --body-inner-width: 66ch;
   --body-max-width: calc(var(--body-inner-width) + var(--horizontal-margin) * 2);
@@ -146,6 +154,12 @@ table {
   font-variant-numeric: oldstyle-nums;
   font-feature-settings: "onum";
   font-size: 16px;
+}
+:root[data-theme=light] {
+  --color-scheme: light;
+}
+:root[data-theme=dark] {
+  --color-scheme: dark;
 }
 * {
   box-sizing: border-box;

@@ -3,8 +3,16 @@
   --font-family-code: "Courier Prime", monospace;
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
-  --text-color: #000;
-  --background-color: #fff;
+
+  --color-scheme: light dark;
+  --light-text-color: #000;
+  --light-background-color: #fff;
+  --dark-text-color: #e8e6e3;
+  --dark-background-color: #161514;
+  --text-color: light-dark(var(--light-text-color), var(--dark-text-color));
+  --background-color: light-dark(var(--light-background-color), var(--dark-background-color));
+  color-scheme: var(--color-scheme);
+
   --horizontal-margin: 3ch;
   --body-inner-width: 66ch;
   --body-max-width: calc(var(--body-inner-width) + var(--horizontal-margin) * 2);
@@ -18,8 +26,16 @@
   font-weight: var(--font-weight-normal);
   font-style: normal;
   font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum"; 
+  font-feature-settings: "onum";
   font-size: 16px;
+}
+
+:root[data-theme="light"] {
+  --color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-scheme: dark;
 }
 
 * {

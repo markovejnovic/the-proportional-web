@@ -126,7 +126,7 @@ fractional, `rem`, and pixel measurements correlate.
 <figcaption>Standard font sizes in fractional and decimal <code>rem</code> units, along with their <code>px</code> equivalents.</figcaption>
 </figure>
 
-Sizing everything based on the root font size makes it easy to scale the 
+Sizing everything based on the root font size makes it easy to scale the
 design, for instance on smaller viewports:
 
 ```css
@@ -167,7 +167,7 @@ goes into the weeds of text justification and modern browser support.
 ### Indented paragraphs for legibility
 
 In keeping with tradition, each successive paragraph is indented 3ch,
-which is the width of three 0 (0x30) characters. As an example, the 
+which is the width of three 0 (0x30) characters. As an example, the
 paragraph following this one leads with an indent.
 
 This lets your eyes more easily scan the structure of the text and find the
@@ -178,12 +178,13 @@ space between paragraphs, it is still a valid approach.
 ## Colors
 
 You may have noticed that this design is devoid of color. It's all black on
-white. Not only am I personally inclined towards this minimalism in prose-heavy
-documents, at least as a strong default that I depart from only with careful
-consideration, but it's also what Bringhurst argues in his book, although with
-print media in mind. I find it aesthetically pleasing and easier on the eyes,
-and it reserves the arsenal of color, and thus the attention of the reader, for
-the most critical things, such as diagrams conveying complex data.
+white (or white on black in dark mode). Not only am I personally inclined
+towards this minimalism in prose-heavy documents, at least as a strong default
+that I depart from only with careful consideration, but it's also what
+Bringhurst argues in his book, although with print media in mind. I find it
+aesthetically pleasing and easier on the eyes, and it reserves the arsenal of
+color, and thus the attention of the reader, for the most critical things, such
+as diagrams conveying complex data.
 
 # Elements
 
@@ -217,7 +218,7 @@ Usage still unsettled
 
 <aside>
 Sadly, due to how I've configured Pandoc section numbering, top level
-headings are `<h1>` elements when they should be `<h2>` elements. If you 
+headings are `<h1>` elements when they should be `<h2>` elements. If you
 produce HTML markup some other way, you might want to avoid this and modify
 the stylesheet accordingly.
 </aside>
@@ -308,7 +309,7 @@ footer with *author*, *work*, and *year*.
 ## Figures
 
 Images with captions are put in `<figure>` and `<figcaption>` elements,
-respectively. Similar to blockquotes, *author* and *work* are styled 
+respectively. Similar to blockquotes, *author* and *work* are styled
 specifically using small-caps and italic text, and they share the
 indentation.
 
@@ -316,7 +317,7 @@ indentation.
     <img src="src/demo/vitruvian-man.jpg" width="435" />
     <figcaption>
         <span class="author">Leonardo Da Vinci</span>,
-        <cite>Vitruvian Man</cite>, 
+        <cite>Vitruvian Man</cite>,
         <span>c. 1490, pen and watercolor over metalpoint on paper, 34.4 × 24.5 cm (photograph via [Wikimedia Commons](https://en.wikipedia.org/wiki/File:VitruvianMan_Leonardo_a.jpg))</span>
     </figcaption>
 </figure>
@@ -471,7 +472,7 @@ it many times over the years.
 
 ## Tufte CSS
 
-[Tufte CSS](https://edwardtufte.github.io/tufte-css/){.canonical-name} 
+[Tufte CSS](https://edwardtufte.github.io/tufte-css/){.canonical-name}
 deserves an honorable mention. From what I've seen, it's had a big impact
 and recognition. There are small details around typesetting that I don't like
 in it, but it's overall a solid piece of work.

@@ -20,12 +20,12 @@ index.html: src/demo/index.md Makefile index.css index.min.css
 		-i $< \
 		| html-minifier --collapse-whitespace > $@
 
-index.css: src/index.css src/reset.css
-	echo "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" > $@
+index.css: src/index.css $(wildcard src/*.css)
+	printf '/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/\n' > $@
 	esbuild --bundle $< >> $@
 
-index.min.css: src/index.css src/reset.css
-	echo "/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/" > $@
+index.min.css: src/index.css $(wildcard src/*.css)
+	printf '/* By Oskar Wickström\nLicensed under the MIT License (https://github.com/owickstrom/the-proportional-web/blob/main/LICENSE.md)\n*/\n' > $@
 	esbuild --bundle --minify $< >> $@
 
 
