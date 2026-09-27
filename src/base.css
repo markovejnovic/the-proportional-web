@@ -4,8 +4,6 @@
   --line-height: 1.20rem;
   --border-thickness: 1.5px;
 
-  /* Which palette to use: `light dark` follows the OS setting, `light` or
-   * `dark` pins one. Override it on :root, or set data-theme on <html>. */
   --color-scheme: light dark;
   --light-text-color: #000;
   --light-background-color: #fff;
@@ -28,7 +26,7 @@
   font-weight: var(--font-weight-normal);
   font-style: normal;
   font-variant-numeric: oldstyle-nums;
-  font-feature-settings: "onum"; 
+  font-feature-settings: "onum";
   font-size: 16px;
 }
 
