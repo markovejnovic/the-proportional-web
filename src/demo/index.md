@@ -185,6 +185,27 @@ print media in mind. I find it aesthetically pleasing and easier on the eyes,
 and it reserves the arsenal of color, and thus the attention of the reader, for
 the most critical things, such as diagrams conveying complex data.
 
+In a dark environment, the page follows the reader's operating system setting
+and inverts to light text on a dark background. The dark palette is a warm
+off-white on near-black rather than pure white on black, since the fine strokes
+of a high-contrast serif glare otherwise.
+
+Both palettes are custom properties on `:root`, so you can adjust them without
+touching the rest of the stylesheet. The `--color-scheme` property picks which
+one is used: `light dark` (the default) follows the operating system, while
+`light` or `dark` pins one. To let readers choose, set `data-theme="light"` or
+`data-theme="dark"` on the `html` element.
+
+```css
+:root {
+  --color-scheme: light dark;
+  --light-text-color: #000;
+  --light-background-color: #fff;
+  --dark-text-color: #e8e6e3;
+  --dark-background-color: #161514;
+}
+```
+
 # Elements
 
 This document uses a few extra classes here and there, but mostly it's just
